@@ -10,7 +10,7 @@ def blog_index(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog_index.html', context)
+    return render(request, 'blog/blog_index.html', context)
 
 
 def blog_category(request, category):
@@ -21,7 +21,7 @@ def blog_category(request, category):
         'category': category,
         'posts': posts
     }
-    return render(request, 'blog_category.html', context)
+    return render(request, 'blog/blog_category.html', context)
 
 
 def blog_detail(request, pk):
@@ -44,4 +44,4 @@ def blog_detail(request, pk):
         'comments': comments,
         'form': form,
     }
-    return render(request, 'blog_detail.html', context)
+    return render(request, 'blog/blog_detail.html', context)
